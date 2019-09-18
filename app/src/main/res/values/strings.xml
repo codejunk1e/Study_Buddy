@@ -95,4 +95,11 @@
     <string name="log_in">Log In</string>
     <string name="sign_up">Sign Up</string>
     <string name="register">REGISTER</string>
+    <string name="title_description">Reg number</string>
+    <string name="name">NAME:</string>
+    <string name="reg_no">REG NO:</string>
+    <string name="department">DEPARTMENT:</string>
+    <string name="n_a">N/A</string>
+    <string name="email_error">Enter Valid Email</string>
+    <string name="password_error">Enter Some Password</string>
 </resources>

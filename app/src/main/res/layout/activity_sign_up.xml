@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_gravity="center"
     android:id="@+id/sign_up_layout"
     android:layout_height="match_parent"
     android:background="#000000"
@@ -15,13 +16,13 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:fontFamily="@font/vamp"
+        android:gravity="center"
         android:text="@string/studybuddy"
         android:textAlignment="center"
         android:textColor="#BF0000"
         android:textSize="60sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.117" />
@@ -36,20 +37,19 @@
         android:background="@drawable/sign_up_rounded"
         android:backgroundTint="#BF0000"
         android:fontFamily="@font/karlabolditalic"
-        android:gravity="center_horizontal|center_vertical"
+        android:gravity="center"
         android:onClick="openLogIn"
         android:shadowRadius="4"
         android:text="@string/register"
         android:textColor="#FDF9F6"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintHorizontal_bias="0.505"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintEnd_toEndOf="@+id/edit_department"
+        app:layout_constraintStart_toStartOf="@+id/edit_department"
+        app:layout_constraintTop_toBottomOf="@+id/edit_department" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/edit_password"
         android:layout_width="wrap_content"
         android:layout_height="50sp"
         android:layout_marginTop="20dp"
@@ -60,16 +60,32 @@
         android:inputType="textPassword"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/editText"
+        app:layout_constraintEnd_toEndOf="@+id/edit_address"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editText"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintStart_toStartOf="@+id/edit_address"
+        app:layout_constraintTop_toBottomOf="@+id/edit_address" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/edit_full_name"
         android:layout_width="wrap_content"
         android:layout_height="50sp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="20dp"
+        android:background="#0DF7F7F7"
+        android:ems="18"
+        android:gravity="center"
+        android:hint="Full Name"
+        android:inputType="textNoSuggestions"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="@+id/edit_password"
+        app:layout_constraintStart_toStartOf="@+id/edit_password"
+        app:layout_constraintTop_toBottomOf="@+id/edit_password" />
+
+    <EditText
+        android:id="@+id/edit_reg_no"
+        android:layout_width="wrap_content"
+        android:layout_height="50sp"
+        android:layout_marginTop="20dp"
         android:background="#0DF7F7F7"
         android:ems="18"
         android:gravity="center"
@@ -77,27 +93,28 @@
         android:inputType="number"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/editText2"
-        app:layout_constraintStart_toStartOf="@+id/editText2"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintEnd_toEndOf="@+id/edit_full_name"
+        app:layout_constraintStart_toStartOf="@+id/edit_full_name"
+        app:layout_constraintTop_toBottomOf="@+id/edit_full_name" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/edit_department"
         android:layout_width="wrap_content"
         android:layout_height="50sp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="20dp"
         android:background="#0DF7F7F7"
         android:ems="18"
         android:gravity="center"
         android:hint="Department"
-        android:inputType="text"
+        android:inputType="textFilter"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
-        app:layout_constraintStart_toStartOf="@+id/editText3"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintEnd_toEndOf="@+id/edit_reg_no"
+        app:layout_constraintStart_toStartOf="@+id/edit_reg_no"
+        app:layout_constraintTop_toBottomOf="@+id/edit_reg_no" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/edit_address"
         android:layout_width="wrap_content"
         android:layout_height="50sp"
         android:layout_marginTop="32dp"
